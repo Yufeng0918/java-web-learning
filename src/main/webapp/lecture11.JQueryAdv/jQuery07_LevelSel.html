@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<script type="text/javascript" src="jquery-1.4.4.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#button1").click(function() {
+			$('body div').css("background", "red");
+		});
+
+		$("#button2").click(function() {
+			$('body > div').css("background", "blue");
+		});
+
+		$("#button3").click(function() {
+			//$('.one + div').css("background", "green");
+			$('.one').next('div').css("background", "green");
+		});
+
+		$("#button4").click(function() {
+			//$("#two ~ div").css("background", "orange");
+			//$('#two').nextAll('div').css("background", "orange");
+			$('#two').siblings('div').css("background", "orange");
+		});
+	});
+</script>
+</head>
+<body>
+	<h3>Level Selector</h3>
+	<input type="button" value="test1" id="button1" />
+	<input type="button" value="test2" id="button2" />
+	<input type="button" value="test3" id="button3" />
+	<input type="button" value="test4" id="button4" />
+	<div class="one" id="one">
+		id is one,class is one div
+		<div class="mini">class is mini</div>
+	</div>
+
+	<div class="one" id="two" title="test">
+		id is two,class is one,title is test div.
+		<div class="mini" title="other">class is mini,title is other</div>
+		<div class="mini" title="test">class is mini,title is test</div>
+	</div>
+
+	<div class="one">
+		<div class="mini">class is mini</div>
+		<div class="mini">class is mini</div>
+		<div class="mini">class is mini</div>
+		<div class="mini"></div>
+	</div>
+
+	<div class="one">
+		<div class="mini">class is mini</div>
+		<div class="mini">class is mini</div>
+		<div class="mini">class is mini</div>
+		<div class="mini" title="tesst">class is mini,title is tesst</div>
+	</div>
+
+	<div style="display: none;" class="none">style display is "none" div</div>
+
+	<div class="hide">class is "hide" div</div>
+
+	<div>
+		contain input type is "hidden" div<input type="hidden" size="8" />
+	</div>
+</body>
+</html>

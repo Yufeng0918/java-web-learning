@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<script type="text/javascript"
+	src="..\jsunit2_2\jsunit\app\jsUnitCore.js"></script>
+
+
+
+<script type="text/javascript">
+	function mySuite() {
+		var testSuite = new top.jsUnitTestSuite();
+
+		testSuite.addTestPage("../../lecture09.JavascriptAdv/Junit01.html");
+		testSuite.addTestPage("../../lecture09.JavascriptAdv/Junit01.html");
+		testSuite.addTestPage("../../lecture09.JavascriptAdv/Junit01.html");
+		return testSuite;
+	}
+
+	function suite() {
+		var testSuite = new top.jsUnitTestSuite();
+
+		testSuite.addTestPage("../../jsUnit_code/test1.html");
+		testSuite.addTestSuite(mySuite());
+
+		return testSuite;
+	}
+</script>
+
+
+
+
+</head>
+
+<body>
+
+</body>
+</html>

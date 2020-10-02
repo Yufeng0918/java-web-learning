@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<script type="text/javascript" src="jquery-1.4.4.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		$("input:eq(0)").click(function() {
+			$("p").attr({
+				"title" : "welcome",
+				"hello" : "world"
+			});
+		});
+
+		$("input:eq(1)").click(function() {
+			alert($('p').attr("hello"));
+		});
+
+		$("input:eq(2)").click(function() {
+			$('p').removeAttr("title");
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="button" value="button1">
+	<input type="button" value="button2">
+	<input type="button" value="button3">
+	<br>
+	<p title="hello world">Hellow</p>
+	<ul>
+		<li title="1">li 1</li>
+		<li title="2">li 2</li>
+		<li title="3">li 3</li>
+		<li title="4">li 4</li>
+		<li title="5">li 5</li>
+		<li title="6">li 6</li>
+	</ul>
+</body>
+</html>

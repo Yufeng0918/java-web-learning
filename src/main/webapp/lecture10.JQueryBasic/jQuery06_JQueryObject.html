@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<script type="text/javascript" src="jquery-1.4.4.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var pElement = document.getElementsByTagName("p")[0];
+		var pElementjQuery = $(pElement);
+		var cm = $("#clickMe"); 
+
+		var t = cm[0]; 
+		alert(t.innerHTML);
+
+		var s = cm.get(0);
+		alert(s.innerHTML); 
+	});
+</script>
+</head>
+<body>
+	<p id="clickMe">Click Me</p>
+</body>
+</html>

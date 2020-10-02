@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<script type="text/javascript" src="jquery-1.4.4.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		var p = $("p");
+		var li = $("ul li:eq(1)");
+
+		var title1 = p.attr("title");
+		var title2 = li.attr("title");
+		var text = li.text();
+
+		alert(title1);
+		alert(title2);
+		alert(text);
+
+		li.attr("title", "myTitle");
+
+	});
+</script>
+</head>
+<body>
+	<p title="hello world">Hello World</p>
+	<ul>
+		<li title="1">li 1</li>
+		<li title="2">li 2</li>
+		<li title="3">li 3</li>
+		<li title="4">li 4</li>
+		<li title="5">li 5</li>
+		<li title="6">li 6</li>
+	</ul>
+</body>
+</html>
